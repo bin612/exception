@@ -46,10 +46,6 @@ public class ApiControllerAdvice {
             String message = field.getDefaultMessage();
             String value = field.getRejectedValue().toString();
 
-            System.out.println(fieldName);
-            System.out.println(message);
-            System.out.println(value);
-
             Error errorMessage = new Error();
             errorMessage.setField(fieldName);
             errorMessage.setMessage(message);
@@ -107,7 +103,6 @@ public class ApiControllerAdvice {
             List<Error> errorList = new ArrayList<>();
 
             String fieldName = e.getParameterName();
-            String fieldType = e.getParameterType();
             String invalidValue = e.getMessage();
 
             Error errorMessage = new Error();
